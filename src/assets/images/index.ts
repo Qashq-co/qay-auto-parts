@@ -1,0 +1,1 @@
+export {default as qayLogo2} from './qay-autos-logo2.png';

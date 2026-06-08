@@ -1,63 +1,38 @@
 import React from 'react';
+import { PillarCard } from './PillarCard';
+import {pillars} from '../assets/data/pillarsData'
 
 export const WhyChooseUs: React.FC = () => {
-  const pillars = [
-    {
-      title: "Fast & Reliable Delivery",
-      desc: "We dispatch orders quickly so your vehicle is back on the road without unnecessary delays. Most UK orders arrive within 1–3 working days.",
-      badge: "🚚"
-    },
-    {
-      title: "1000+ Parts in Stock",
-      desc: "From obscure engine codes to high-demand components, our catalogue covers virtually every make and model on UK roads.",
-      badge: "🎯",
-      highlighted: true
-    },
-    {
-      title: "Genuine Quality Guaranteed",
-      desc: "Every part we stock whether genuine OEM or premium aftermarket is rigorously sourced from trusted global brands.",
-      badge: "🛡️"
-    }
-  ];
 
   return (
-    <section className="py-20 bg-brand-lightBg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-24 bg-brand-lightBg relative overflow-hidden" id="benefits">
+      {/* Background Industrial Accent Matrix Lines */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808007_1px,transparent_1px),linear-gradient(to_bottom,#80808007_1px,transparent_1px)] bg-[size:14px_24px]" aria-hidden="true" />
+
+      {/* Subtle Radial Ambient Shadows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
         
-        <div className="text-center space-y-2">
-          <p className="text-brand-orange font-bold tracking-widest text-xs uppercase">OUR BENEFITS</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-brand-navy uppercase tracking-tight">Why Choose QAY Auto Parts</h2>
+        {/* Headings Layout */}
+        <div className="text-center space-y-3">
+          <p className="text-brand-orange font-extrabold tracking-widest text-[11px] uppercase bg-orange-500/5 inline-block px-3 py-1 rounded border border-brand-orange/15 shadow-sm">
+            OUR BENEFITS
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-black text-brand-navy uppercase tracking-tight">
+            Why Choose <span className="text-brand-orange">QAY Auto Parts</span>
+          </h2>
+          <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3 shadow-sm"></div>
         </div>
 
-        {/* 3-Column Balanced Card Deck inspired by image_972b8b.png */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 3-Column Balanced Popout Card Deck */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
           {pillars.map((item, idx) => (
-            <div 
+            <PillarCard 
               key={idx} 
-              className={`rounded-2xl p-8 border transition-all duration-300 relative flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md ${
-                item.highlighted 
-                  ? 'bg-brand-orange text-white border-brand-orange' 
-                  : 'bg-white text-brand-darkText border-gray-200'
-              }`}
-            >
-              <div className="space-y-4 relative z-10">
-                <h3 className={`text-xl font-black uppercase tracking-wide ${item.highlighted ? 'text-white' : 'text-brand-navy'}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${item.highlighted ? 'text-orange-50' : 'text-gray-500'}`}>
-                  {item.desc}
-                </p>
-              </div>
-
-              <div className="mt-8 flex justify-between items-center relative z-10">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-sm ${item.highlighted ? 'bg-white' : 'bg-brand-lightBg'}`}>
-                  {item.badge}
-                </div>
-                <span className={`text-xs font-bold uppercase tracking-wider ${item.highlighted ? 'text-white' : 'text-brand-orange'}`}>
-                  View Details ➔
-                </span>
-              </div>
-            </div>
+              item={item} 
+              index={idx} 
+            />
           ))}
         </div>
 

@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <h3 className="text-white font-bold text-lg tracking-wide mb-4">Get In Touch</h3>
           <p className="text-sm text-gray-400">Have an OEM part number or inquiry?</p>
           <div className="mt-3 space-y-1">
-            <p className="text-white font-bold text-base">📞 +44 (0) 123 456 7890</p>
+            <p className="text-white font-bold text-base">📞 +92 3232242603</p>
             <p className="text-brand-orange text-sm font-medium">✉️ info@qayautoparts.co.uk</p>
           </div>
         </div>

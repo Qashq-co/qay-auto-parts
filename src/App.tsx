@@ -7,6 +7,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { FactsBanner } from './components/FactsBanner';
 import { Testimonials } from './components/Testimonials';
 import { Products } from './pages/Products';
+import FloatingTalkButton from './components/FloatingTalkButton';
 
 type Page = 'home' | 'about' | 'products' | 'contact';
 
@@ -41,7 +42,7 @@ function App() {
           <div className="py-24 text-center font-bold text-sm uppercase text-gray-400">Contact View Interface Panel</div>
         )}
       </main>
-
+        <FloatingTalkButton />
       <Footer setCurrentPage={setCurrentPage} />
     </div>
   );

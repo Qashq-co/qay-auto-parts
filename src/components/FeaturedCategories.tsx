@@ -1,5 +1,6 @@
 import React from 'react';
 import { CATEGORIES } from '../assets/data/partsData';
+import { CategoryCard } from './CategoryCard'; // Import the new component
 
 interface FeaturedCategoriesProps {
   setCurrentPage: (page: 'home' | 'about' | 'products' | 'contact') => void;
@@ -8,41 +9,39 @@ interface FeaturedCategoriesProps {
 
 export const FeaturedCategories: React.FC<FeaturedCategoriesProps> = ({ setCurrentPage, setSelectedCategory }) => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-24 bg-white relative overflow-hidden" id="categories">
+      {/* Background Grid Pattern Accent */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]" aria-hidden="true" />
+      
+      {/* Background Soft Ambient Light Filters */}
+      <div className="absolute -top-40 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -left-40 w-96 h-96 bg-[#0B1D3A]/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
         
-        <div className="text-center space-y-2">
-          <p className="text-brand-orange font-bold tracking-widest text-xs uppercase">SHOP BY CATEGORY</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-brand-navy tracking-tight uppercase">
-            FEATURED <span className="text-brand-orange italic">CATEGORIES</span>
+        {/* Header Layout */}
+        <div className="text-center space-y-3">
+          <p className="text-brand-orange font-extrabold tracking-widest text-[11px] uppercase bg-orange-500/5 inline-block px-3 py-1 rounded border border-brand-orange/15 shadow-sm">
+            B2B Spares Distribution
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-black text-brand-navy tracking-tight uppercase">
+            FEATURED <span className="text-brand-orange">CATEGORIES</span>
           </h2>
-          <div className="w-12 h-1 bg-brand-orange mx-auto rounded-full mt-2"></div>
+          <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3 shadow-sm"></div>
         </div>
 
-        {/* 5-Column Clean Response Matrix inspired by image_9720bf.jpg */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
-          {CATEGORIES.map((cat) => (
-            <div
+        {/* 5-Column High-Contrast Grid Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 sm:gap-6">
+          {CATEGORIES.map((cat, index) => (
+            <CategoryCard
               key={cat.id}
+              cat={cat}
+              index={index}
               onClick={() => {
                 setSelectedCategory(cat.id);
                 setCurrentPage('products');
               }}
-              className="bg-white border border-gray-200/80 rounded-xl p-5 text-center flex flex-col justify-between items-center transition-all duration-300 hover:border-brand-orange hover:shadow-lg hover:-translate-y-1 cursor-pointer group"
-            >
-              <div className="w-16 h-16 rounded-xl bg-brand-lightBg flex items-center justify-center text-3xl mb-4 group-hover:bg-orange-50 transition-colors">
-                {cat.icon}
-              </div>
-              
-              <div className="space-y-1">
-                <h3 className="text-xs font-black text-brand-navy group-hover:text-brand-orange transition-colors uppercase tracking-tight min-h-[32px] flex items-center justify-center">
-                  {cat.name}
-                </h3>
-                <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">
-                  {cat.count} Products
-                </p>
-              </div>
-            </div>
+            />
           ))}
         </div>
 

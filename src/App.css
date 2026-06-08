@@ -1,0 +1,42 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, rgba(255, 146, 23, 0.16), transparent 30%),
+    linear-gradient(180deg, #08131f 0%, #0f1f36 100%);
+}
+
+.brand-card {
+  width: min(100%, 820px);
+  padding: 42px 36px;
+  text-align: center;
+  border-radius: 32px;
+  background: rgba(15, 22, 40, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.24);
+}
+
+.brand-logo {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto 26px;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.25));
+}
+
+.brand-card h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.brand-card p {
+  margin: 18px auto 0;
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d2d7e4;
+}

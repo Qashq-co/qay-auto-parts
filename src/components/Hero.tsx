@@ -5,8 +5,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
-  // B2B Automotive background video loop (or high-res fallback poster image)
-  const heroVideoUrl = 'https://cdn.prod.website-files.com/6719ad0ceed6d5aa24a83d61%2F696ecc1f3ff5304a4fb2789b_Hero-video%20%281%29_mp4.mp4';
+  // B2B Automotive background video loop (local video file)
+  const heroVideoUrl = '/hero.mp4'; 
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-navy text-white" id="home">

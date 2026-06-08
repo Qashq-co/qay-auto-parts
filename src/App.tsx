@@ -8,6 +8,8 @@ import { FactsBanner } from './components/FactsBanner';
 import { Testimonials } from './components/Testimonials';
 import { Products } from './pages/Products';
 import FloatingTalkButton from './components/FloatingTalkButton';
+import {About} from './pages/About';
+import {Contact} from './pages/Contact';
 
 type Page = 'home' | 'about' | 'products' | 'contact';
 
@@ -35,11 +37,11 @@ function App() {
         )}
 
         {currentPage === 'about' && (
-          <div className="py-24 text-center font-bold text-sm uppercase text-gray-400">About View Interface Panel</div>
-        )}
+        <About />
+      )}
 
         {currentPage === 'contact' && (
-          <div className="py-24 text-center font-bold text-sm uppercase text-gray-400">Contact View Interface Panel</div>
+          <Contact/>
         )}
       </main>
         <FloatingTalkButton />

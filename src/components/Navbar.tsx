@@ -89,12 +89,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
 
             {/* Right Section: Core Desktop CTA Actions */}
             <div className="hidden md:flex items-center gap-3">
-              <a 
+              {/* <a 
                 href={mailtoUrl}
                 className="flex items-center gap-1.5 px-4 py-2 border border-white/20 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors"
               >
                 <span>Email Us</span>
-              </a>
+              </a> */}
               <a 
                 href={whatsappUrl}
                 target="_blank" 

@@ -9,11 +9,10 @@ interface Category {
 
 interface CategoryCardProps {
   cat: Category;
-  index: number;
   onClick: () => void;
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ cat, index, onClick }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({ cat, onClick }) => {
   return (
     <div
       onClick={onClick}

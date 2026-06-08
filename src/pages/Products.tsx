@@ -64,7 +64,10 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
                         selectedCategory === cat.id ? 'bg-brand-navy text-white border-l-4 border-brand-orange' : 'text-gray-600 hover:bg-gray-50'
                       }`}
                     >
-                      <span className="truncate">{cat.icon} {cat.name}</span>
+                      <span className="truncate flex items-center gap-2">
+                        <img src={cat.image} alt={cat.name} className="w-4 h-4 rounded object-cover" />
+                        <span className="truncate">{cat.name}</span>
+                      </span>
                       <span className={`text-[10px] px-2 py-0.5 rounded-full ${selectedCategory === cat.id ? 'bg-brand-orange text-white' : 'bg-gray-100 text-gray-500'}`}>
                         {cat.count}
                       </span>

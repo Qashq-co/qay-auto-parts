@@ -32,11 +32,10 @@ export const FeaturedCategories: React.FC<FeaturedCategoriesProps> = ({ setCurre
 
         {/* 5-Column High-Contrast Grid Layout */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 sm:gap-6">
-          {CATEGORIES.map((cat, index) => (
+          {CATEGORIES.map((cat) => (
             <CategoryCard
               key={cat.id}
               cat={cat}
-              index={index}
               onClick={() => {
                 setSelectedCategory(cat.id);
                 setCurrentPage('products');

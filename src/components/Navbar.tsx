@@ -3,7 +3,7 @@ import { qayLogo2 } from '../assets/images';
 
 interface NavbarProps {
   currentPage: string;
-  setCurrentPage: (page: 'home' | 'about' | 'products' | 'contact') => void;
+  setCurrentPage: (page: 'home' | 'products' | 'about' | 'contact') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
@@ -30,8 +30,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
     { id: 'products', label: 'Products & Categories' },
+    { id: 'about', label: 'About Us' },
     { id: 'contact', label: 'Contact & Quotes' },
   ] as const;
 

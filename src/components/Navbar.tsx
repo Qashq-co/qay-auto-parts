@@ -118,6 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                 </svg>
               </a>
 
+
               <button
                 onClick={toggleNav}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-800 focus:outline-none"
@@ -156,7 +157,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               </svg>
             </button>
           </div>
-
           {/* Navigation Links inside Mobile Drawer */}
           <div className="mt-6 space-y-2">
             {navItems.map((item) => (

@@ -1,5 +1,5 @@
 function FloatingTalkButton() {
-  const phoneNumber = import.meta.env.VITE_WHATSAPP_PHONE_NUMBER || "03232242603";
+  const phoneNumber = import.meta.env.VITE_WHATSAPP_PHONE_NUMBER || "923232242603";
   const defaultMessage = "Hello QAY Auto Parts Team, I am visiting your website and would like to inquire about sourcing components for our operations.";
   
   const encodedMessage = encodeURIComponent(defaultMessage);

@@ -11,7 +11,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
   const [isHeaderActive, setIsHeaderActive] = useState(false);
 
   // Dynamic Contact Extraction via Environment Utilities
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_PHONE || "923479310319";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_PHONE || "923232242603";
   const emailAddress = import.meta.env.VITE_SUPPORT_EMAIL || "contact.qashq@gmail.com";
   
   const defaultMessage = encodeURIComponent("Hello QAY Auto Parts Team, I would like to inquire about a business quote.");

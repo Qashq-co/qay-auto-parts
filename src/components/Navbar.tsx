@@ -89,19 +89,17 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
 
             {/* Right Section: Core Desktop CTA Actions */}
             <div className="hidden md:flex items-center gap-3">
-              {/* <a 
-                href={mailtoUrl}
-                className="flex items-center gap-1.5 px-4 py-2 border border-white/20 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors"
-              >
-                <span>Email Us</span>
-              </a> */}
               <a 
                 href={whatsappUrl}
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-md text-sm font-bold tracking-wide shadow-md shadow-emerald-900/20 transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-[#22B3B3] hover:bg-[#1da1a1] text-white rounded-full text-sm font-bold tracking-wide transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-lg shadow-cyan-950/20 active:translate-y-0"
               >
-                <span>Order Now</span>
+                {/* Visual arrow identifier matching image_2c161b.png */}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3.5 h-3.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+                <span>Let's Talk Business</span>
               </a>
             </div>
 
@@ -112,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                 href={whatsappUrl}
                 target="_blank" 
                 rel="noreferrer"
-                className="p-2 bg-emerald-600 rounded-full text-white hover:bg-emerald-500 transition-colors"
+                className="p-2.5 bg-brand-orange rounded-full text-white hover:bg-brand-orange transition-colors shadow-md"
                 aria-label="Quick WhatsApp Quote"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 448 512">
@@ -138,7 +136,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
           </div>
         </div>
 
-        {/* Mobile Full Slide-out Drawer Panel (Inspired by reference UI layout) */}
+        {/* Mobile Full Slide-out Drawer Panel */}
         <div 
           className={`fixed top-0 right-0 h-full w-[280px] max-w-sm bg-brand-navy shadow-2xl z-[50] p-6 transform transition-transform duration-300 ease-in-out border-l border-white/5 md:hidden ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -163,7 +161,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
           <div className="mt-6 space-y-2">
             {navItems.map((item) => (
               <button
-                key={item.id}
+                key={item.id as any}
                 onClick={() => {
                   setCurrentPage(item.id);
                   closeNav();
@@ -193,9 +191,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               target="_blank" 
               rel="noreferrer"
               onClick={closeNav}
-              className="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 rounded-lg text-sm font-bold shadow-lg shadow-emerald-950/40 transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-[#22B3B3] rounded-full text-sm font-bold shadow-lg transition-all transform active:scale-95"
             >
-              <span>WhatsApp Chat</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3.5 h-3.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+              <span>Let's Talk Business</span>
             </a>
           </div>
         </div>

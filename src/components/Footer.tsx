@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>&copy; {new Date().getFullYear()} Qay Auto Parts Ltd. Company registered in England & Wales.</p>
+        <p>&copy; {new Date().getFullYear()} Qay Auto Parts Ltd. Company registered in UK</p>
         <p className="tracking-wide">High Quality Replacement Parts</p>
       </div>
     </footer>

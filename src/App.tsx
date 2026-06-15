@@ -10,6 +10,7 @@ import { Products } from './pages/Products';
 import FloatingTalkButton from './components/FloatingTalkButton';
 import {About} from './pages/About';
 import {Contact} from './pages/Contact';
+import {BrandCarousel} from './components/BrandCarousel';
 
 type Page = 'home' | 'about' | 'products' | 'contact';
 
@@ -26,9 +27,11 @@ function App() {
           <>
             <Hero setCurrentPage={setCurrentPage} />
             <FeaturedCategories setCurrentPage={setCurrentPage} setSelectedCategory={setSelectedCategory} />
+            <BrandCarousel/>
             <WhyChooseUs />
             <FactsBanner />
             <Testimonials />
+      
           </>
         )}
 

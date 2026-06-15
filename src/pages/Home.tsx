@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Services } from '../components/Services';
 import { Features } from '../components/Features';
+import {BrandCarousel} from '../components/BrandCarousel'
 
 interface HomeProps {
   setCurrentPage: (page: 'home' | 'about' | 'products' | 'contact') => void;
@@ -16,6 +17,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
         <About setCurrentPage={setCurrentPage} />
         <Services setCurrentPage={setCurrentPage} />
         <Features />
+        <BrandCarousel/>
       </article>
     </main>
   );

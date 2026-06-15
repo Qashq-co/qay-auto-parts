@@ -22,7 +22,7 @@ export const FeaturedCategories: React.FC<FeaturedCategoriesProps> = ({ setCurre
         {/* Header Layout */}
         <div className="text-center space-y-3">
           <p className="text-brand-orange font-extrabold tracking-widest text-[11px] uppercase bg-orange-500/5 inline-block px-3 py-1 rounded border border-brand-orange/15 shadow-sm">
-            B2B Spares Distribution
+            B2C Spares Distribution
           </p>
           <h2 className="text-3xl sm:text-5xl font-black text-brand-navy tracking-tight uppercase">
             FEATURED <span className="text-brand-orange">CATEGORIES</span>

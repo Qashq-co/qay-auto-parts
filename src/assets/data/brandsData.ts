@@ -1,0 +1,68 @@
+import {
+  alfaromeo,
+  audi,
+  bmw,
+  bmwMini,
+  chevrolet,
+  citroen,
+  fiat,
+  ford,
+  honda,
+  hyundai,
+  jaguar,
+  jeep,
+  kia,
+  landRover,
+  mercedesBenz,
+  mitsubishi,
+  peugeot,
+  renault,
+  rover,
+  saab,
+  seat,
+  skoda,
+  subaru,
+  toyota,
+  unisan,
+  vauxhall,
+  volkswagen,
+  volvo,
+} from '../images/logos';
+
+export interface Brand {
+  id: string;
+  name: string;
+  logoUrl: string;
+}
+
+// Data mapped directly from your reference images: 
+export const BRANDS_DATA: Brand[] = [
+  { id: 'skoda', name: 'Skoda', logoUrl: skoda },
+  { id: 'mini', name: 'Mini Cooper', logoUrl: bmwMini },
+  { id: 'renault', name: 'Renault', logoUrl: renault },
+  { id: 'toyota', name: 'Toyota', logoUrl: toyota },
+  { id: 'seat', name: 'SEAT', logoUrl: seat },
+  { id: 'landrover', name: 'Land Rover', logoUrl: landRover },
+  { id: 'mercedes', name: 'Mercedes-Benz', logoUrl: mercedesBenz },
+  { id: 'saab', name: 'Saab', logoUrl: saab },
+  { id: 'mitsubishi', name: 'Mitsubishi', logoUrl: mitsubishi },
+  { id: 'peugeot', name: 'Peugeot', logoUrl: peugeot },
+  { id: 'audi', name: 'Audi', logoUrl: audi },
+  { id: 'rover', name: 'Rover', logoUrl: rover },
+  { id: 'hyundai', name: 'Hyundai', logoUrl: hyundai },
+  { id: 'nissan', name: 'Nissan', logoUrl: unisan },
+  { id: 'alfaromeo', name: 'Alfa Romeo', logoUrl: alfaromeo },
+  { id: 'chevrolet', name: 'Chevrolet', logoUrl: chevrolet },
+  { id: 'jaguar', name: 'Jaguar', logoUrl: jaguar },
+  { id: 'ford', name: 'Ford', logoUrl: ford },
+  { id: 'subaru', name: 'Subaru', logoUrl: subaru },
+  { id: 'jeep', name: 'Jeep', logoUrl: jeep },
+  { id: 'kia', name: 'KIA', logoUrl: kia },
+  { id: 'bmw', name: 'BMW', logoUrl: bmw },
+  { id: 'citroen', name: 'Citroën', logoUrl: citroen },
+  { id: 'volvo', name: 'Volvo', logoUrl: volvo },
+  { id: 'vauxhall', name: 'Vauxhall', logoUrl: vauxhall },
+  { id: 'volkswagen', name: 'Volkswagen', logoUrl: volkswagen },
+  { id: 'honda', name: 'Honda', logoUrl: honda },
+  { id: 'fiat', name: 'Fiat', logoUrl: fiat },
+];

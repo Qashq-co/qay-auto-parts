@@ -22,14 +22,14 @@ export const FeaturedCategories: React.FC<FeaturedCategoriesProps> = ({ setCurre
         {/* Header Layout */}
         <div className="text-center space-y-3">
           <p className="text-brand-orange font-extrabold tracking-widest text-[11px] uppercase bg-orange-500/5 inline-block px-3 py-1 rounded border border-brand-orange/15 shadow-sm">
-            B2C Spares Distribution
+            Engine Rebuild & Replacement Components
           </p>
           <h2 className="text-3xl sm:text-5xl font-black text-brand-navy tracking-tight uppercase">
-            FEATURED <span className="text-brand-orange">CATEGORIES</span>
+            FEATURED <span className="text-brand-orange">ENGINE PARTS</span>
           </h2>
           <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3 shadow-sm"></div>
         </div>
-
+ 
         {/* 5-Column High-Contrast Grid Layout */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 sm:gap-6">
           {CATEGORIES.map((cat) => (

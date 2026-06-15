@@ -5,27 +5,21 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
-  // B2B Automotive background video loop
-  const heroVideoUrl = '/hero.mp4'; 
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-navy text-white" id="home">
       
-      {/* Background Media Shell */}
+      {/* Background Media Shell - Engine Parts Video */}
       <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         <video
-          className="w-full h-full object-cover scale-105 filter brightness-95"
+          className="absolute inset-0 h-full w-full object-cover"
+          src="/engine-hero.mp4"
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
-        >
-          <source src={heroVideoUrl} type="video/mp4" />
-        </video>
-        
-        {/* Advanced Layer Mask Overlays for Deep Visual Hierarchy */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1D3A]/95 via-[#0B1D3A]/75 to-transparent"></div>
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1D3A]/85 via-[#0B1D3A]/70 to-[#0B1D3A]/95"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A] via-transparent to-transparent opacity-60"></div>
       </div>
 
@@ -36,19 +30,19 @@ export const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
           {/* Enhanced Badge with Backdrop Blur */}
           <div className="inline-block">
             <p className="text-brand-orange font-bold tracking-widest text-[11px] uppercase bg-orange-500/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-brand-orange/30 shadow-sm">
-              ⚙️ Premium Component Distribution
+              ⚙️ Engine Rebuild & Replacement Parts
             </p>
           </div>
           
-          {/* Sleeker Typographic Scale & Heading Weight Balance */}
+          {/* Engine-Focused Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] uppercase max-w-3xl">
-            Building Smarter Fleets <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-300">Through Precision</span> <span className="text-brand-orange block sm:inline">Engineering</span>
+            High-Quality Engine <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-300">Rebuild & Replacement</span> <span className="text-brand-orange block sm:inline">Parts</span>
           </h1>
 
-          {/* Improved Body Text Legibility */}
+          {/* Engine-Focused Subheading */}
           <p className="text-gray-300 text-lg sm:text-xl font-normal max-w-2xl leading-relaxed">
-            We supply high-demand replacement components with disciplined quality assurance, dependable trade fulfillment, and practical part-matching strategies.
+            Supplying engine components for passenger and commercial vehicles — pistons, crankshafts, cylinder heads, gaskets and more. Premium quality, fast dispatch, and dependable trade fulfillment.
           </p>
 
           {/* Balanced B2B CTA Action Row */}

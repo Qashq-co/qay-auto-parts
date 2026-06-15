@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                 href={whatsappUrl}
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-[#22B3B3] hover:bg-[#1da1a1] text-white rounded-full text-sm font-bold tracking-wide transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-lg shadow-cyan-950/20 active:translate-y-0"
+                className="flex items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange text-white rounded-full text-sm font-bold tracking-wide transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-lg shadow-cyan-950/20 active:translate-y-0"
               >
                 {/* Visual arrow identifier matching image_2c161b.png */}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3.5 h-3.5">

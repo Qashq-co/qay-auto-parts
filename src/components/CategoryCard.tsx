@@ -3,6 +3,7 @@ import React from 'react';
 interface Category {
   id: string;
   name: string;
+  description: string;
   count: number;
   image: string;
 }
@@ -43,6 +44,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ cat, onClick }) => {
           <h3 className="text-xs sm:text-sm font-black text-brand-navy group-hover:text-brand-orange transition-colors duration-300 uppercase tracking-tight min-h-[40px] flex items-center justify-center px-1">
             {cat.name}
           </h3>
+          <p className="text-[10px] font-normal text-gray-600 px-2 py-2 line-clamp-2 group-hover:text-gray-800 transition-colors">
+            {cat.description}
+          </p>
           <p className="text-[10px] font-bold text-gray-400 bg-gray-100 group-hover:bg-orange-500/10 group-hover:text-brand-orange inline-block px-3 py-0.5 rounded-full transition-all duration-300 uppercase tracking-wider mt-1 group-hover:scale-105">
             {cat.count} Components
           </p>

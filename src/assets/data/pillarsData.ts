@@ -1,17 +1,17 @@
  export const pillars = [
     {
-      title: "Fast & Reliable Delivery",
-      desc: "We dispatch orders quickly so your vehicle is back on the road without unnecessary delays. Most UK orders arrive within 1–3 working days.",
+      title: "Engine Components Specialists",
+      desc: "We specialise in engine rebuild and replacement parts — pistons, crankshafts, cylinder heads, gaskets, bearings, timing chains, camshafts, and more. Supplying passenger and commercial vehicle engines.",
       highlighted: false
     },
     {
-      title: "1000+ Parts in Stock",
-      desc: "From obscure engine codes to high-demand components, our catalogue covers virtually every make and model on UK roads.",
+      title: "Quality Assured & Tested",
+      desc: "Every component is 100% QA inspected. 1-year replacement warranty on all parts. Sourced from trusted global OEM and premium aftermarket brands.",
       highlighted: true
     },
     {
-      title: "Genuine Quality Guaranteed",
-      desc: "Every part we stock—whether genuine OEM or premium aftermarket—is rigorously sourced from trusted global brands.",
+      title: "Fast Dispatch & Support",
+      desc: "Next-day delivery available on most orders. UK-based dedicated support team. Quick turnaround for engine rebuild projects and commercial fleet requirements.",
       highlighted: false
     }
   ];

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
+import { TrustBadges } from './components/TrustBadges';
 import { FeaturedCategories } from './components/FeaturedCategories';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { FactsBanner } from './components/FactsBanner';
@@ -26,6 +27,7 @@ function App() {
         {currentPage === 'home' && (
           <>
             <Hero setCurrentPage={setCurrentPage} />
+            <TrustBadges />
             <FeaturedCategories setCurrentPage={setCurrentPage} setSelectedCategory={setSelectedCategory} />
             <BrandCarousel/>
             <WhyChooseUs />

@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
         <div className="space-y-4">
           <h3 className="text-white font-bold text-lg tracking-wide">QAY AUTO PARTS LTD</h3>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Premium suppliers of certified, high-end commercial and passenger vehicle components across the UK. Engineered for performance and longevity.
+            Specialists in engine rebuild and replacement parts for passenger and commercial vehicles across the UK. Supplying pistons, crankshafts, cylinder heads, gaskets, bearings and more. Quality assured with fast dispatch.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p>&copy; {new Date().getFullYear()} Qay Auto Parts Ltd. Company registered in UK</p>
-        <p className="tracking-wide">High Quality Replacement Parts</p>
+        <p className="tracking-wide">✓ 1-Year Replacement Warranty | Engine Rebuild & Replacement Parts</p>
       </div>
     </footer>
   );

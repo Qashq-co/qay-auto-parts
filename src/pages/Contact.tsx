@@ -37,13 +37,13 @@ export const Contact: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center">
           <p className="text-brand-orange font-black tracking-widest text-[11px] uppercase bg-orange-500/10 inline-block px-3 py-1 rounded border border-brand-orange/20 shadow-sm">
-            B2B Trade Desk
+            Engine Parts Support
           </p>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight uppercase">
-            CONNECT WITH <span className="text-brand-orange">OUR EXPERTS</span>
+            REQUEST ENGINE <span className="text-brand-orange">COMPONENTS</span>
           </h1>
           <p className="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto font-normal leading-relaxed">
-            Submit an OEM part trace request, check live UK warehouse stock levels, or open a commercial garage trade account.
+            Submit an engine part inquiry, check live UK warehouse stock availability, or open a trade account for bulk engine rebuild projects.
           </p>
         </div>
       </section>

@@ -51,10 +51,10 @@ export const About: React.FC = () => {
             Company Overview
           </p>
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight uppercase leading-none">
-            ENGINEERED TO <span className="text-brand-orange">PERFORM</span>
+            ENGINEERED TO <span className="text-brand-orange">REBUILD</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            QAY Auto Parts Ltd is a dedicated partner to the UK automotive trade, supplying precision replacement components for passenger and commercial vehicle networks.
+            QAY Auto Parts Ltd is a specialist supplier of engine rebuild and replacement components for the UK automotive trade, serving passenger and commercial vehicle networks.
           </p>
         </div>
       </section>
@@ -68,12 +68,12 @@ export const About: React.FC = () => {
           <div className="space-y-2">
             <span className="text-brand-orange text-xs font-black uppercase tracking-wider block">OUR REPUTATION</span>
             <h2 className="text-2xl sm:text-4xl font-black text-brand-navy uppercase tracking-tight leading-tight">
-              Setting the Standard in Spare Parts Distribution
+              Setting the Standard in Engine Parts Distribution
             </h2>
           </div>
           
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-            At QAY Auto Parts Ltd, we understand that a replacement part is only as good as its raw materials and manufacturing tolerances. We source our catalog items exclusively from certified global manufacturers and tier-1 production lines, ensuring every component matches or exceeds OEM specifications.
+            At QAY Auto Parts Ltd, we specialise in engine rebuild and replacement parts — pistons, crankshafts, cylinder heads, gaskets, bearings, timing chains, camshafts, and more. Every component in our catalog is sourced exclusively from certified global manufacturers and tier-1 production lines, ensuring precise OEM specifications.
           </p>
 
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">

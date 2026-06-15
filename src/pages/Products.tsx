@@ -21,7 +21,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
   // Pre-fills a WhatsApp message containing the exact chosen product information
   const handleWhatsAppInquiry = (item: PartItem) => {
     const phoneNumber = "923232242603"; // Replace with your real WhatsApp Business Number
-    const message = `Hello QAY Auto Parts Team, I would like to inquire about stock availability for the following component:\n\n• Part Name: ${item.name}\n• Category: ${item.category.toUpperCase()}\n• Reference SKU: ${item.sku}\n• Listed Price: £${item.price}`;
+    const message = `Hello QAY Auto Parts Team, I would like to inquire about stock availability and pricing for the following component:\n\n• Part Name: ${item.name}\n• Category: ${item.category.toUpperCase()}\n• Reference SKU: ${item.sku}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -32,7 +32,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
       {/* Category Header Banner inspired by image_972027.jpg */}
       <div className="bg-brand-navy text-white py-12 text-center border-b-4 border-brand-orange">
         <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">{currentCategoryName}</h1>
-        <p className="text-gray-400 text-xs sm:text-sm mt-2 tracking-widest uppercase">QAY Trade Fulfillment Desk</p>
+        <p className="text-gray-400 text-xs sm:text-sm mt-2 tracking-widest uppercase">Engine Rebuild Components Catalogue</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -42,7 +42,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
           <aside className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
               <h3 className="text-brand-navy font-black text-sm uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
-                Browse System Portfolios
+                Engine Parts Categories
               </h3>
               
               <ul className="space-y-1">
@@ -117,17 +117,12 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
                     </div>
 
                     <div className="px-4 pb-4 pt-2 border-t border-gray-50 space-y-3 bg-gray-50/50">
-                      <div className="flex justify-between items-baseline">
-                        <span className="text-xs font-medium text-gray-400">Trade Pricing</span>
-                        <span className="text-lg font-black text-brand-navy">£{product.price}</span>
-                      </div>
-                      
                       {/* Interactive Custom WhatsApp Conversion Switch instead of traditional Add to Cart */}
                       <button
                         onClick={() => handleWhatsAppInquiry(product)}
-                        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase py-2.5 rounded-lg flex items-center justify-center gap-2 tracking-wide shadow-sm transition-colors"
+                        className="w-full bg-brand-orange hover:bg-brand-orange text-white font-bold text-xs uppercase py-2.5 rounded-lg flex items-center justify-center gap-2 tracking-wide shadow-sm transition-colors"
                       >
-                        <span className="text-sm">💬</span> Check Trade Stock
+                        <span className="text-sm">💬</span> Check Trade Stock & Pricing
                       </button>
                     </div>
                   </article>

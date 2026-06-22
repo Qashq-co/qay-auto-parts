@@ -73,7 +73,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-[10px] text-gray-400 font-black uppercase tracking-wider">Urgent Phone Support</p>
-                <p className="text-base font-black text-brand-navy mt-0.5">+92 3232242603</p>
+                <p className="text-base font-black text-brand-navy mt-0.5">+44 7398467535</p>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-[10px] text-gray-400 font-black uppercase tracking-wider">Digital Procurement</p>
-                <p className="text-base font-black text-brand-navy mt-0.5">info@qayautoparts.co.uk</p>
+                <p className="text-base font-black text-brand-navy mt-0.5">sales@qayautoparts.co.uk</p>
               </div>
             </div>
           </div>

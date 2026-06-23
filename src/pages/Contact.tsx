@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const Contact: React.FC = () => {
   // Toggle state: 'general' | 'quote'
   const [formType, setFormType] = useState<'general' | 'quote'>('quote');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Form input states
   const [formData, setFormData] = useState({
@@ -21,11 +23,53 @@ export const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle your form submission logistics here (e.g., API call to backend)
-    console.log(`Submitting ${formType} request:`, formData);
-    alert('Thank you for your request. Our trade desk will contact you shortly with availability and pricing.');
+    setIsSubmitting(true);
+
+    // 1. Format the data body transparently for your email template context variables
+    const templateParams = {
+      form_type: formType.toUpperCase(),
+      from_name: formData.name,
+      reply_to: formData.email,
+      phone_number: formData.phone,
+      company_name: formData.companyName || 'Not Provided',
+      vrm_vin: formType === 'quote' ? formData.vrmVin : 'N/A',
+      engine_code: formType === 'quote' ? (formData.engineCode || 'Not Provided') : 'N/A',
+      urgency_level: formType === 'quote' ? formData.urgency.toUpperCase() : 'GENERAL',
+      message_details: formData.partDescription,
+      target_sales_desk: 'sales@qayautoparts.co.uk'
+    };
+
+    try {
+      // 2. Transmit payload directly via public emailjs gateway endpoint
+      // Replace placeholders with your exact dashboard keys from emailjs.com
+      await emailjs.send(
+        'service_yd9iqsa',     // Email service provider id
+        'template_4znagmm',    // Email template structure variable id
+        templateParams,
+        'lEkxTX0wpvVQW8Yjl'      // Account API Key identifier
+      );
+
+      alert('Thank you! Your request has been transmitted successfully to our trade desk.');
+      
+      // Reset variables on successful execution profile
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        companyName: '',
+        vrmVin: '',
+        engineCode: '',
+        partDescription: '',
+        urgency: 'routine'
+      });
+    } catch (error) {
+      console.error('Email transmission fallback exception:', error);
+      alert('Transmission interrupted. Please forward details directly to sales@qayautoparts.co.uk instead.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -37,7 +81,7 @@ export const Contact: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center">
           <p className="text-brand-orange font-black tracking-widest text-[11px] uppercase bg-orange-500/10 inline-block px-3 py-1 rounded border border-brand-orange/20 shadow-sm">
-            Engine Parts Support
+            QAY Auto Parts Ltd — Corporate Trade Desk
           </p>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight uppercase">
             REQUEST ENGINE <span className="text-brand-orange">COMPONENTS</span>
@@ -51,7 +95,7 @@ export const Contact: React.FC = () => {
       {/* 2. CORE WORKSPACE: Info & Interactive Form */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        {/* Left Column: Direct Contact Channels & Logistics info */}
+        {/* Left Column: Direct Contact Channels & Legal Metadata */}
         <div className="lg:col-span-5 space-y-8">
           <div className="space-y-3">
             <span className="text-brand-orange text-xs font-black uppercase tracking-wider block">DIRECT CHANNELS</span>
@@ -59,7 +103,7 @@ export const Contact: React.FC = () => {
               Skip the Queue, Call the Desk
             </h2>
             <p className="text-gray-500 text-sm leading-relaxed">
-              For immediate parts verification or time-critical fleet groundings, contact our technicians directly.
+              For immediate parts verification or time-critical fleet groundings, contact our corporate logistics facility handlers directly.
             </p>
           </div>
 
@@ -91,12 +135,13 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-brand-navy text-white p-6 rounded-2xl space-y-4 relative overflow-hidden">
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-brand-orange/10 rounded-full blur-xl pointer-events-none" />
-            <h4 className="font-black text-xs uppercase tracking-wider text-brand-orange">Trade Commitment</h4>
-            <p className="text-xs text-gray-300 leading-relaxed">
-              Quotes submitted during standard operations are processed within <strong>1–2 business hours</strong> by an experienced parts technician equipped with access to global microfiche platforms.
-            </p>
+          {/* Statutory Registration Sub-Card Information */}
+          <div className="bg-[#071426] text-white p-5 rounded-2xl border border-slate-800 space-y-3">
+            <h4 className="font-black text-xs uppercase tracking-wider text-brand-orange">Entity Registration Details</h4>
+            <div className="text-[11px] text-slate-300 space-y-1.5 leading-relaxed font-mono">
+              <p><span className="text-slate-400 font-sans">Company Number:</span> 16921659</p>
+              <p><span className="text-slate-400 font-sans">Office Location:</span> 20 Wenlock Road, London, United Kingdom, N1 7GU</p>
+            </div>
           </div>
         </div>
 
@@ -107,23 +152,25 @@ export const Contact: React.FC = () => {
           <div className="flex bg-gray-50 border-b border-gray-200 p-2">
             <button
               type="button"
+              disabled={isSubmitting}
               onClick={() => setFormType('quote')}
               className={`flex-1 py-3 text-center text-xs font-black uppercase tracking-wider rounded-xl transition-all duration-300 ${
                 formType === 'quote' 
                   ? 'bg-brand-navy text-white shadow-sm' 
                   : 'text-gray-500 hover:text-brand-navy'
-              }`}
+              } disabled:opacity-50`}
             >
               🛠️ Request Parts Quote
             </button>
             <button
               type="button"
+              disabled={isSubmitting}
               onClick={() => setFormType('general')}
               className={`flex-1 py-3 text-center text-xs font-black uppercase tracking-wider rounded-xl transition-all duration-300 ${
                 formType === 'general' 
                   ? 'bg-brand-navy text-white shadow-sm' 
                   : 'text-gray-500 hover:text-brand-navy'
-              }`}
+              } disabled:opacity-50`}
             >
               ✉️ General Inquiry
             </button>
@@ -137,16 +184,16 @@ export const Contact: React.FC = () => {
               <div className="space-y-1.5">
                 <label className="text-[11px] font-extrabold uppercase text-gray-500 tracking-wider">Full Name *</label>
                 <input 
-                  type="text" required name="name" value={formData.name} onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all"
+                  type="text" required name="name" value={formData.name} onChange={handleInputChange} disabled={isSubmitting}
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all disabled:opacity-60"
                   placeholder="e.g. John Doe"
                 />
               </div>
               <div className="space-y-1.5">
                 <label className="text-[11px] font-extrabold uppercase text-gray-500 tracking-wider">Email Address *</label>
                 <input 
-                  type="email" required name="email" value={formData.email} onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all"
+                  type="email" required name="email" value={formData.email} onChange={handleInputChange} disabled={isSubmitting}
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all disabled:opacity-60"
                   placeholder="name@workshop.co.uk"
                 />
               </div>
@@ -157,16 +204,16 @@ export const Contact: React.FC = () => {
               <div className="space-y-1.5">
                 <label className="text-[11px] font-extrabold uppercase text-gray-500 tracking-wider">Phone / WhatsApp *</label>
                 <input 
-                  type="tel" required name="phone" value={formData.phone} onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all"
+                  type="tel" required name="phone" value={formData.phone} onChange={handleInputChange} disabled={isSubmitting}
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all disabled:opacity-60"
                   placeholder="e.g. +44 7123 456789"
                 />
               </div>
               <div className="space-y-1.5">
                 <label className="text-[11px] font-extrabold uppercase text-gray-500 tracking-wider">Company / Workshop Name</label>
                 <input 
-                  type="text" name="companyName" value={formData.companyName} onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all"
+                  type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} disabled={isSubmitting}
+                  className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all disabled:opacity-60"
                   placeholder="Optional"
                 />
               </div>
@@ -181,16 +228,16 @@ export const Contact: React.FC = () => {
                       <span>UK Reg Plate / VIN *</span>
                     </label>
                     <input 
-                      type="text" required={formType === 'quote'} name="vrmVin" value={formData.vrmVin} onChange={handleInputChange}
-                      className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-mono uppercase tracking-widest focus:outline-none focus:border-brand-orange transition-all"
+                      type="text" required={formType === 'quote'} name="vrmVin" value={formData.vrmVin} onChange={handleInputChange} disabled={isSubmitting}
+                      className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-mono uppercase tracking-widest focus:outline-none focus:border-brand-orange transition-all disabled:opacity-60"
                       placeholder="e.g. AB12 CDE"
                     />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-extrabold uppercase text-brand-navy tracking-wider">Engine Code (If Known)</label>
                     <input 
-                      type="text" name="engineCode" value={formData.engineCode} onChange={handleInputChange}
-                      className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-mono uppercase focus:outline-none focus:border-brand-orange transition-all"
+                      type="text" name="engineCode" value={formData.engineCode} onChange={handleInputChange} disabled={isSubmitting}
+                      className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-mono uppercase focus:outline-none focus:border-brand-orange transition-all disabled:opacity-60"
                       placeholder="e.g. N47D20A"
                     />
                   </div>
@@ -202,7 +249,8 @@ export const Contact: React.FC = () => {
                     name="urgency"
                     value={formData.urgency}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange transition-all font-medium"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange transition-all font-medium disabled:opacity-60"
                   >
                     <option value="routine">Standard Sourcing Inquiry (Routine Stocking)</option>
                     <option value="urgent">Vehicle Off Road (VOR) - High Priority Dispatch</option>
@@ -217,18 +265,19 @@ export const Contact: React.FC = () => {
                 {formType === 'quote' ? 'Requested Components Details *' : 'Inquiry Message Details *'}
               </label>
               <textarea 
-                required rows={4} name="partDescription" value={formData.partDescription} onChange={handleInputChange}
-                className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all resize-none"
-                placeholder={formType === 'quote' ? 'List out explicit parts or OEM references (e.g., Timing belt kit, Front brake discs, Crankshaft pulley)...' : 'Type your message details here...'}
+                required rows={4} name="partDescription" value={formData.partDescription} onChange={handleInputChange} disabled={isSubmitting}
+                className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-orange focus:bg-white transition-all resize-none disabled:opacity-60"
+                placeholder={formType === 'quote' ? 'List out explicit parts or OEM references (e.g., Timing belt kit, Cylinder Head gasket, Pistons)...' : 'Type your message details here...'}
               />
             </div>
 
             {/* Submission Action Button */}
             <button
               type="submit"
-              className="w-full bg-brand-orange hover:bg-orange-600 text-white font-black uppercase tracking-wider py-4 rounded-xl text-xs sm:text-sm shadow-md shadow-orange-500/10 transition-all duration-300 transform hover:-translate-y-0.5"
+              disabled={isSubmitting}
+              className="w-full bg-brand-orange hover:bg-orange-600 disabled:bg-gray-400 text-white font-black uppercase tracking-wider py-4 rounded-xl text-xs sm:text-sm shadow-md shadow-orange-500/10 transition-all duration-300 transform hover:-translate-y-0.5 disabled:transform-none"
             >
-              {formType === 'quote' ? 'Transmit Quote Request ➔' : 'Send Inquiry Message ➔'}
+              {isSubmitting ? 'Transmitting Data...' : formType === 'quote' ? 'Transmit Quote Request ➔' : 'Send Inquiry Message ➔'}
             </button>
 
           </form>

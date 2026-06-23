@@ -48,17 +48,16 @@ export const About: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center">
           <p className="text-brand-orange font-black tracking-widest text-[11px] uppercase bg-orange-500/10 inline-block px-3 py-1 rounded border border-brand-orange/20 shadow-sm">
-            Company Overview
+            Registered UK Corporate Entity
           </p>
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight uppercase leading-none">
             ENGINEERED TO <span className="text-brand-orange">REBUILD</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
-            QAY Auto Parts Ltd is a specialist supplier of engine rebuild and replacement components for the UK automotive trade, serving passenger and commercial vehicle networks.
+            QAY Auto Parts Ltd is a certified, legally registered specialist supplier of engine rebuild and replacement components for the UK automotive trade network.
           </p>
         </div>
       </section>
-
 
       {/* 2. CORE NARRATIVE: Strategic Mission & Trade Profile */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -73,55 +72,86 @@ export const About: React.FC = () => {
           </div>
           
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-            At QAY Auto Parts Ltd, we specialise in engine rebuild and replacement parts — pistons, crankshafts, cylinder heads, gaskets, bearings, timing chains, camshafts, and more. Every component in our catalog is sourced exclusively from certified global manufacturers and tier-1 production lines, ensuring precise OEM specifications.
+            At QAY Auto Parts Ltd, we specialise in premium engine rebuild and replacement parts — pistons, crankshafts, cylinder heads, gaskets, bearings, timing chains, camshafts, and more. Every component in our catalog is sourced exclusively from certified global manufacturers and tier-1 production lines, ensuring precise OEM specifications.
           </p>
 
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-            Our comprehensive approach features precision search filters that allow trade clients to source components seamlessly by internal engine code, brand framework, or part numbers. This eliminates catalog ambiguity and prevents incorrect order fulfillments.
+            Operating as an established corporate provider from our registered UK logistics infrastructure, our comprehensive system features precision search metrics that allow trade clients, workshops, and commercial fleets to source components seamlessly by engine code or part identifier.
           </p>
 
           {/* Blockquote Embed */}
           <div className="border-l-4 border-brand-orange bg-gray-50 p-5 rounded-r-xl space-y-2">
             <p className="text-xs sm:text-sm text-brand-navy font-bold tracking-wide">
-              "Whether dispatching high-demand timing kits or obscure internal block components, our focus is absolute accuracy and structural integrity."
+              "Whether dispatching high-demand timing kits or obscure internal block components, our structural focus is absolute corporate accountability, accuracy, and structural integrity."
             </p>
-            <span className="text-[10px] text-gray-400 uppercase font-bold block">— Operations Directorate, QAY Auto Parts</span>
+            <span className="text-[10px] text-gray-400 uppercase font-bold block">— Board of Directors, QAY Auto Parts Ltd</span>
           </div>
         </div>
 
-        {/* Right Side: Visual Info-Graphic Box Grid */}
-        <div className="lg:col-span-5 bg-gray-50 border border-gray-200/60 rounded-2xl p-6 sm:p-8 space-y-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/[0.02] rounded-full blur-xl pointer-events-none" />
+        {/* Right Side: Visual Info-Graphic Box Grid with Registered Data */}
+        <div className="lg:col-span-5 space-y-6">
           
-          <h3 className="text-brand-navy font-black text-sm uppercase tracking-wider border-b border-gray-200 pb-3">
-            Quality Control Framework
-          </h3>
+          {/* Corporate Registration Registry Identity Block */}
+          <div className="bg-brand-navy text-white rounded-2xl p-6 border border-slate-800 shadow-md space-y-4">
+            <div className="flex justify-between items-center border-b border-slate-800 pb-3">
+              <h3 className="font-black text-xs uppercase tracking-wider text-brand-orange">
+                Statutory Registration Profile
+              </h3>
+              <span className="text-[10px] bg-emerald-500/15 text-emerald-400 font-bold px-2 py-0.5 rounded border border-emerald-500/20 uppercase">
+                Active Entity
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-4 text-xs">
+              <div>
+                <p className="text-slate-400 font-medium">Registered Name</p>
+                <p className="text-white font-bold uppercase mt-0.5 tracking-wide">Qay Auto Parts Ltd</p>
+              </div>
+              <div>
+                <p className="text-slate-400 font-medium">Company Number</p>
+                <p className="text-white font-bold mt-0.5 tracking-wider">16921659</p>
+              </div>
+              <div className="col-span-2">
+                <p className="text-slate-400 font-medium">Registered Office Address</p>
+                <p className="text-white font-semibold mt-0.5 leading-relaxed">
+                  20 Wenlock Road, London,<br />United Kingdom, N1 7GU
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <ul className="space-y-4">
-            {[
-              { title: "Material Verification", desc: "Rigorous testing protocols for high-tensile strength and thermal properties." },
-              { title: "Batch Certification", desc: "Every inventory lot tracked and verified before entering UK storage cells." },
-              { title: "Exact Fit Validation", desc: "Components cross-referenced with live factory blueprints." }
-            ].map((item, idx) => (
-              <li key={idx} className="flex gap-3 items-start">
-                <div className="mt-1 w-5 h-5 rounded-md bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 flex-shrink-0">
-                  <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-black text-brand-navy uppercase tracking-tight">{item.title}</h4>
-                  <p className="text-xs text-gray-500 mt-0.5 leading-normal">{item.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          {/* Quality Framework Box */}
+          <div className="bg-gray-50 border border-gray-200/60 rounded-2xl p-6 space-y-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/[0.02] rounded-full blur-xl pointer-events-none" />
+            
+            <h3 className="text-brand-navy font-black text-sm uppercase tracking-wider border-b border-gray-200 pb-3">
+              Quality Control Framework
+            </h3>
+
+            <ul className="space-y-4">
+              {[
+                { title: "Material Verification", desc: "Rigorous testing protocols for high-tensile strength and thermal properties." },
+                { title: "Batch Certification", desc: "Every inventory lot tracked and verified before entering UK storage cells." },
+                { title: "Exact Fit Validation", desc: "Components cross-referenced with live factory blueprints." }
+              ].map((item, idx) => (
+                <li key={idx} className="flex gap-3 items-start">
+                  <div className="mt-1 w-5 h-5 rounded-md bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 flex-shrink-0">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-black text-brand-navy uppercase tracking-tight">{item.title}</h4>
+                    <p className="text-xs text-gray-500 mt-0.5 leading-normal">{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
-
       {/* 3. METRIC COUNTERS: Operational Infrastructure Scale */}
-      <section className="bg-brand-lightBg py-16 border-y border-gray-200/40">
+      <section className="bg-slate-50 py-16 border-y border-gray-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {milestones.map((item, idx) => (
             <div key={idx} className="space-y-1 group">
@@ -135,7 +165,6 @@ export const About: React.FC = () => {
           ))}
         </div>
       </section>
-
 
       {/* 4. VALUE PILLARS: Professional Performance Guarantees */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -169,7 +198,6 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-
       {/* 5. CALL TO ACTION (CTA): Professional Quote Gateway */}
       <section className="bg-[#071426] text-white relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(#EA580C_1px,transparent_1px)] opacity-[0.03] [background-size:20px_20px]" aria-hidden="true" />
@@ -179,7 +207,7 @@ export const About: React.FC = () => {
             Looking for a Specific OEM Component or Brand?
           </h2>
           <p className="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-            Get in touch with our specialist desk. Provide your vehicle specification or active part reference identifier for an immediate trade availability report.
+            Get in touch with our specialist corporate trade desk. Provide your vehicle specification or active part reference identifier for an immediate availability report.
           </p>
           <div className="pt-2">
             <a 

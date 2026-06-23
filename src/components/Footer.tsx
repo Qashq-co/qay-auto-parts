@@ -38,19 +38,29 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           </ul>
         </div>
 
-        {/* Direct Contact */}
+        {/* Direct Contact & Address */}
         <div>
           <h3 className="text-white font-bold text-lg tracking-wide mb-4">Get In Touch</h3>
-          <p className="text-sm text-gray-400">Have an OEM part number or inquiry?</p>
-          <div className="mt-3 space-y-1">
+          <div className="space-y-1 text-sm text-gray-400 mb-4">
             <p className="text-white font-bold text-base">📞 +44 7398467535</p>
             <p className="text-brand-orange text-sm font-medium">✉️ sales@qayautoparts.co.uk</p>
           </div>
+          
+          <h4 className="text-white font-semibold text-sm tracking-wide mb-1">Registered Office</h4>
+          <p className="text-sm text-gray-400 leading-relaxed">
+            20 Wenlock Road,<br />
+            London, United Kingdom<br />
+            <span className="text-white font-medium">{`Postcode: N1 7GU`}</span>
+          </p>
         </div>
       </div>
 
+      {/* Bottom Copyright & Legal Line */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>&copy; {new Date().getFullYear()} Qay Auto Parts Ltd. Company registered in UK</p>
+        <div className="text-center sm:text-left">
+          <p>&copy; {new Date().getFullYear()} Qay Auto Parts Ltd.</p>
+          <p className="text-slate-600 mt-0.5">Company Registration No: 16921659</p>
+        </div>
         <p className="tracking-wide">✓ 1-Year Replacement Warranty | Engine Rebuild & Replacement Parts</p>
       </div>
     </footer>

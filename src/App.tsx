@@ -12,6 +12,8 @@ import FloatingTalkButton from './components/FloatingTalkButton';
 import {About} from './pages/About';
 import {Contact} from './pages/Contact';
 import {BrandCarousel} from './components/BrandCarousel';
+import { FAQ} from './components/Faqs'
+import { TrustedBrands} from './components/Brands'
 
 type Page = 'home' | 'about' | 'products' | 'contact';
 
@@ -33,6 +35,8 @@ function App() {
             <WhyChooseUs />
             <FactsBanner />
             <Testimonials />
+            <TrustedBrands/>
+            <FAQ/>
       
           </>
         )}

@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
     <>
       {/* Dimmed Background Overlay Shield for Mobile Drawers */}
       <div 
-        className={`fixed inset-0 bg-black/60 z-[40] transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 bg-brand-navy/60 z-[40] transition-opacity duration-300 md:hidden ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={closeNav}
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               <img 
                 src={qayLogo2} 
                 alt="QAY Auto Parts Logo" 
-                className="h-11 w-11 object-contain rounded-md transition-transform duration-300 group-hover:scale-105" 
+                className="h-24 w-24 object-contain rounded-md transition-transform duration-300 group-hover:scale-105" 
               />
               <span className="text-xl md:text-2xl font-black tracking-tight text-white transition-colors duration-200">
                 QAY <span className="text-brand-orange">AUTO PARTS</span>
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               target="_blank" 
               rel="noreferrer"
               onClick={closeNav}
-              className="flex items-center justify-center gap-2 w-full py-3 bg-[#22B3B3] rounded-full text-sm font-bold shadow-lg transition-all transform active:scale-95"
+              className="flex items-center justify-center gap-2 w-full py-3 bg-brand-orange rounded-full text-sm font-bold shadow-lg transition-all transform active:scale-95"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3.5 h-3.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

@@ -7,7 +7,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-brand-navy text-white" id="home">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden  text-white" id="home">
       
       {/* Background Media Shell - Engine Parts Video */}
       <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -19,8 +19,8 @@ export const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
           loop
           playsInline
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1D3A]/85 via-[#0B1D3A]/70 to-[#0B1D3A]/95"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A] via-transparent to-transparent opacity-60"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#0B1D3A]/85 via-[#0B1D3A]/70 to-[#0B1D3A]/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A] via-transparent to-transparent opacity-60"></div> */}
       </div>
 
       {/* Content Container Shell */}

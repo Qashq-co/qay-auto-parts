@@ -91,7 +91,7 @@ export const FAQ: React.FC = () => {
             Still have a question regarding a specific OEM component or commercial quote?
           </p>
           <p className="text-sm text-white font-semibold mt-2">
-            Speak to a Parts Specialist: <span className="text-brand-orange">07398 467535</span>
+            Speak to a Parts Specialist: <span className="text-brand-orange">+44 7398 467535</span>
           </p>
         </div>
       </div>

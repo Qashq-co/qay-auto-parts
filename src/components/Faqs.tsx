@@ -42,7 +42,7 @@ export const FAQ: React.FC = () => {
       question: "How do I ensure I am ordering the exact correct component for my vehicle?",
       answer: (
         <span>
-          The most secure method is by matching your original equipment manufacturer number. If you are unsure, simply drop our team a message via email at <strong className="text-brand-orange">sales@qayautoparts.co.uk</strong> or call/WhatsApp us directly at <strong className="text-white">+44 7398467535</strong> with your UK vehicle registration mark (VRM) or chassis number, and our parts specialists will verify fitment for you.
+          The most secure method is by matching your original equipment manufacturer number. If you are unsure, simply drop our team a message via email at <strong className="text-brand-orange">sales@qayautoparts.co.uk</strong> or call/WhatsApp us directly at <strong className="text-white">+44 7378201055</strong> with your UK vehicle registration mark (VRM) or chassis number, and our parts specialists will verify fitment for you.
         </span>
       )
     },
@@ -91,7 +91,7 @@ export const FAQ: React.FC = () => {
             Still have a question regarding a specific OEM component or commercial quote?
           </p>
           <p className="text-sm text-white font-semibold mt-2">
-            Speak to a Parts Specialist: <span className="text-brand-orange">+44 7398 467535</span>
+            Speak to a Parts Specialist: <span className="text-brand-orange">+44 7378201055</span>
           </p>
         </div>
       </div>

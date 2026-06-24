@@ -117,7 +117,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="text-[10px] text-gray-400 font-black uppercase tracking-wider">Urgent Phone Support</p>
-                <p className="text-base font-black text-brand-navy mt-0.5">+44 7398467535</p>
+                <p className="text-base font-black text-brand-navy mt-0.5">+44 7378201055</p>
               </div>
             </div>
 

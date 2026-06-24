@@ -20,7 +20,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
 
   // Pre-fills a WhatsApp message containing the exact chosen product information
   const handleWhatsAppInquiry = (item: PartItem) => {
-    const phoneNumber = "447398467535"; // Replace with your real WhatsApp Business Number
+    const phoneNumber = "447378201055"; // Replace with your real WhatsApp Business Number
     const message = `Hello QAY Auto Parts Team, I would like to inquire about stock availability and pricing for the following component:\n\n• Part Name: ${item.name}\n• Category: ${item.category.toUpperCase()}\n• Reference SKU: ${item.sku}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');

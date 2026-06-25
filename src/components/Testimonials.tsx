@@ -97,7 +97,7 @@ export const Testimonials: React.FC = () => {
             TRUSTED PARTNER NETWORK
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-brand-navy uppercase tracking-tight">
-            WHAT THE TRADE SAYS ABOUT <span className="text-brand-orange">QAY</span>
+            WHAT CUSTOMERS ON EBAY SAYS ABOUT <span className="text-brand-orange">QAY</span>
           </h2>
           <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-3" />
         </div>

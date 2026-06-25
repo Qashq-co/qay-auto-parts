@@ -35,7 +35,7 @@ export const CATEGORIES: Category[] = [
     name: 'Head Bolts',
     description: 'High-strength head bolt sets',
     count: 42,
-    image: 'https://i.pinimg.com/1200x/47/69/e0/4769e0d25801b89641c99c9b005ee4d8.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/head-bolts.png'
   },
   {
     id: 'pistons',
@@ -162,7 +162,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'head-bolts',
     sku: 'QAY-10045',
     fitment: 'Heavy-Duty Fasteners',
-    image: 'https://i.pinimg.com/1200x/47/69/e0/4769e0d25801b89641c99c9b005ee4d8.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/head-bolts.png'
   },
   {
     id: 'p6',

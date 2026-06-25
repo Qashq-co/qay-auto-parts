@@ -49,7 +49,7 @@ export const CATEGORIES: Category[] = [
     name: 'Timing Belt Kits',
     description: 'Complete timing belt replacement kits',
     count: 51,
-    image: 'https://i.pinimg.com/736x/20/fa/7e/20fa7e4b0b4fcb44be5153493fa70b15.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/timing-belts.png'
   },
   {
     id: 'valves',
@@ -70,21 +70,21 @@ export const CATEGORIES: Category[] = [
     name: 'Cam Kits',
     description: 'Camshaft and tensioner kit assemblies',
     count: 38,
-    image: 'https://i.pinimg.com/1200x/4c/20/d1/4c20d182388800666864058c3de4c223.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/cam-kits.png'
   },
   {
     id: 'piston-rings',
     name: 'Piston Rings',
     description: 'Sealing piston ring sets',
     count: 68,
-    image: 'https://i.pinimg.com/1200x/67/ea/a9/67eaa93c747b875e81813d2563d977e7.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/rings.png'
   },
   {
     id: 'cylinder-heads',
     name: 'Cylinder Heads',
     description: 'Complete cylinder head assemblies',
     count: 57,
-    image: 'https://i.pinimg.com/736x/2e/08/9c/2e089cf5f28cb1dab19b89e31bd7d462.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/cylinder-head.png'
   },
   {
     id: 'crankshafts',
@@ -170,7 +170,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'timing-belt-kits',
     sku: 'QAY-10056',
     fitment: 'Overhead Cam Engines',
-    image: 'https://i.pinimg.com/736x/20/fa/7e/20fa7e4b0b4fcb44be5153493fa70b15.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/timing-belts.png'
   },
   {
     id: 'p7',
@@ -178,7 +178,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'valves',
     sku: 'QAY-10067',
     fitment: 'Multi-Valve Cylinder Heads',
-    image: 'https://i.pinimg.com/1200x/6d/cc/07/6dcc075eec2ae946d2a0494b3b709606.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/cylinder-head.png'
   },
   {
     id: 'p8',
@@ -194,7 +194,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'cam-kits',
     sku: 'QAY-10089',
     fitment: 'Sports & Street Profile',
-    image: 'https://i.pinimg.com/1200x/4c/20/d1/4c20d182388800666864058c3de4c223.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/cam-kits.png'
   },
   {
     id: 'p10',
@@ -202,7 +202,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'piston-rings',
     sku: 'QAY-10100',
     fitment: 'Eco-Efficiency Engines',
-    image: 'https://images.unsplash.com/photo-1629473967398-c89954f24266?auto=format&fit=crop&w=600&q=80'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/rings.png'
   },
   {
     id: 'p11',

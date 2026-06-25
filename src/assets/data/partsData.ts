@@ -42,7 +42,7 @@ export const CATEGORIES: Category[] = [
     name: 'Pistons',
     description: 'OEM and forged pistons',
     count: 79,
-    image: 'https://i.pinimg.com/1200x/81/63/0e/81630ee1cb868f777a03127c00d309ee.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/pistons.png'
   },
   {
     id: 'timing-belt-kits',
@@ -98,7 +98,7 @@ export const CATEGORIES: Category[] = [
     name: 'Conrods',
     description: 'Heavy-duty connecting rods',
     count: 50,
-    image: 'https://i.ebayimg.com/images/g/MWwAAOSw6Dlizmon/s-l1600.webp'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/conrad.png'
   },
   {
     id: 'timing-chain-kits',
@@ -119,7 +119,7 @@ export const CATEGORIES: Category[] = [
     name: 'Gasket Kits',
     description: 'Comprehensive gasket kit solutions',
     count: 62,
-    image: 'https://i.pinimg.com/736x/ad/34/fa/ad34fa8f132ac87bc0dd0d41bf8da43a.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2016/11/gasket-sets.png'
   },
 ];
 
@@ -130,7 +130,7 @@ export const PARTS_ITEMS: PartItem[] = [
     category: 'pistons',
     sku: 'QAY-10001',
     fitment: 'High-Performance Spec',
-    image: 'https://i.pinimg.com/1200x/81/63/0e/81630ee1cb868f777a03127c00d309ee.jpg'
+    image: 'http://kingcomponents.co.uk/wp-content/uploads/2017/01/pistons.png'
   },
   {
     id: 'p2',

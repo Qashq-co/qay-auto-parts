@@ -1,17 +1,47 @@
- export const reviews = [
-    {
-      author: "James R.",
-      location: "Manchester",
-      text: "Ordered a crankshaft on Monday, arrived by Wednesday. Perfect fit and better priced than anywhere else I checked. Smooth experience from start to finish."
-    },
-    {
-      author: "Adeel K.",
-      location: "Bradford",
-      text: "The range of timing kits and gaskets is genuinely impressive. Couldn’t find OEM-spec alternatives at these prices anywhere online. My go-to for engine parts now."
-    },
-    {
-      author: "Richard T.",
-      location: "London",
-      text: "Searching by engine code made it so easy to find exactly what I needed. Site is well-organised and the Shop by Brand feature is a brilliant touch."
-    }
-  ];
+export const reviews = [
+  {
+    author: "James R.",
+    location: "Manchester",
+    text: "Ordered a crankshaft on Monday, arrived by Wednesday. Perfect fit and better priced than anywhere else I checked. Smooth experience from start to finish."
+  },
+  {
+    author: "Adeel K.",
+    location: "Bradford",
+    text: "The range of timing kits and gaskets is genuinely impressive. Couldn’t find OEM-spec alternatives at these prices anywhere online. My go-to for engine parts now."
+  },
+  {
+    author: "Richard T.",
+    location: "London",
+    text: "Searching by engine code made it so easy to find exactly what I needed. Site is well-organised and the Shop by Brand feature is a brilliant touch."
+  },
+  {
+    author: "greenbasketz (63)",
+    location: "Verified Purchase",
+    text: "Quick delivery, great quality product, and unbeatable price. Very satisfied, thanks! The part condition was brand new and appearance was perfect. Highly recommended.",
+    meta: "High Temp Silicone Gasket Sealant Black +350°C"
+  },
+  {
+    author: "kwiktrans (659)",
+    location: "Verified Purchase",
+    text: "Item as described",
+    meta: "DIESEL ENGINE 204DTD CONNECTING CONROD For JAGUAR E-PACE XE XF 2.0 D"
+  },
+  {
+    author: "5400brenda (1043)",
+    location: "Verified Purchase",
+    text: "As described fast delivery many thanks",
+    meta: "LAND ROVER JAGUAR 204DTD SINGLE TURBO PISTON RINGS SET STD SIZE"
+  },
+  {
+    author: "no1! (534)",
+    location: "Verified Purchase",
+    text: "Perfect timing arrived same day as sump hopefully be fitted soon and without an issue! A1 service many thanks supper pleased!",
+    meta: "Oil Sump Engine Oil Pan RTV Silicone Gasket Sealant Hi-Temp Black"
+  },
+  {
+    author: "vadkrasn888 (304)",
+    location: "Verified Purchase",
+    text: "Excellent seller! Fast shipping, item exactly as described, and great communication throughout. Highly recommended—would definitely buy again.",
+    meta: "Black RTV Silicone High Temp Gasket Maker Sealant 85g Tube"
+  }
+];

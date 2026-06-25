@@ -126,178 +126,178 @@ export const CATEGORIES: Category[] = [
 export const PARTS_ITEMS: PartItem[] = [
   {
     id: 'p1',
-    name: 'Honda K20A Pistons Set',
+    name: 'High-Performance Engine Pistons Set',
     category: 'pistons',
     sku: 'QAY-10001',
-    fitment: 'Honda Civic K20A',
+    fitment: 'High-Performance Spec',
     image: 'https://i.pinimg.com/1200x/81/63/0e/81630ee1cb868f777a03127c00d309ee.jpg'
   },
   {
     id: 'p2',
-    name: 'Toyota 3S-GTE Piston Ring Set',
+    name: 'Premium Compression Piston Ring Set',
     category: 'piston-rings',
     sku: 'QAY-10012',
-    fitment: 'Toyota Celica ST205',
+    fitment: 'Standard Multi-Valve',
     image: 'https://i.pinimg.com/1200x/67/ea/a9/67eaa93c747b875e81813d2563d977e7.jpg'
   },
   {
     id: 'p3',
-    name: 'BMW N47 Crankshaft',
+    name: 'Precision Balanced Engine Crankshaft',
     category: 'crankshafts',
     sku: 'QAY-10023',
-    fitment: 'BMW 3 Series E90',
+    fitment: 'Multi-Cylinder Diesel/Petrol',
     image: 'https://i.pinimg.com/236x/b3/4f/ba/b34fba77b0ce5b0b68bf0408345ed8f3.jpg'
   },
   {
     id: 'p4',
-    name: 'Ford Duratec Cylinder Head',
+    name: 'Aluminum Alloy Bare Cylinder Head',
     category: 'cylinder-heads',
     sku: 'QAY-10034',
-    fitment: 'Ford Focus MK2',
+    fitment: 'Dual Overhead Cam (DOHC)',
     image: 'https://i.pinimg.com/736x/2e/08/9c/2e089cf5f28cb1dab19b89e31bd7d462.jpg'
   },
   {
     id: 'p5',
-    name: 'Nissan SR20DET Head Bolt Kit',
+    name: 'High-Tensile Cylinder Head Bolt Kit',
     category: 'head-bolts',
     sku: 'QAY-10045',
-    fitment: 'Nissan Silvia S14',
+    fitment: 'Heavy-Duty Fasteners',
     image: 'https://i.pinimg.com/1200x/47/69/e0/4769e0d25801b89641c99c9b005ee4d8.jpg'
   },
   {
     id: 'p6',
-    name: 'VW Passat Timing Belt Kit',
+    name: 'Complete Timing Belt & Tensioner Kit',
     category: 'timing-belt-kits',
     sku: 'QAY-10056',
-    fitment: 'VW Passat B6',
+    fitment: 'Overhead Cam Engines',
     image: 'https://i.pinimg.com/736x/20/fa/7e/20fa7e4b0b4fcb44be5153493fa70b15.jpg'
   },
   {
     id: 'p7',
-    name: 'Land Rover Valve Set',
+    name: 'Engine Intake & Exhaust Valve Set',
     category: 'valves',
     sku: 'QAY-10067',
-    fitment: 'Land Rover Defender 2.2',
+    fitment: 'Multi-Valve Cylinder Heads',
     image: 'https://i.pinimg.com/1200x/6d/cc/07/6dcc075eec2ae946d2a0494b3b709606.jpg'
   },
   {
     id: 'p8',
-    name: 'Renault Clio Water Pump',
+    name: 'High-Flow Mechanical Water Pump',
     category: 'water-pumps',
     sku: 'QAY-10078',
-    fitment: 'Renault Clio 1.2',
+    fitment: 'Standard Block Cooling',
     image: 'https://i.pinimg.com/1200x/49/41/e8/4941e84ee077b92493ca797891350f24.jpg'
   },
   {
     id: 'p9',
-    name: 'Hyundai Cam Kit',
+    name: 'Performance Camshaft & Lifter Kit',
     category: 'cam-kits',
     sku: 'QAY-10089',
-    fitment: 'Hyundai i30 1.6',
+    fitment: 'Sports & Street Profile',
     image: 'https://i.pinimg.com/1200x/4c/20/d1/4c20d182388800666864058c3de4c223.jpg'
   },
   {
     id: 'p10',
-    name: 'Mazda Skyactiv Piston Rings',
+    name: 'Low-Friction Engine Piston Rings',
     category: 'piston-rings',
     sku: 'QAY-10100',
-    fitment: 'Mazda 3 Skyactiv',
+    fitment: 'Eco-Efficiency Engines',
     image: 'https://images.unsplash.com/photo-1629473967398-c89954f24266?auto=format&fit=crop&w=600&q=80'
   },
   {
     id: 'p11',
-    name: 'Audi A4 Oil Pump',
+    name: 'High-Pressure Internal Oil Pump',
     category: 'oil-pumps',
     sku: 'QAY-10111',
-    fitment: 'Audi A4 B8',
+    fitment: 'Wet-Sump Lubrication',
     image: 'https://i.pinimg.com/1200x/f0/8f/9e/f08f9e759de9441c0555d9b8ce37eda9.jpg'
   },
   {
     id: 'p12',
-    name: 'Mercedes OM646 Gasket Kit',
+    name: 'Complete Engine Overhaul Gasket Kit',
     category: 'gasket-kits',
     sku: 'QAY-10122',
-    fitment: 'Mercedes C-Class',
+    fitment: 'Full Top & Bottom Set',
     image: 'https://i.pinimg.com/736x/ad/34/fa/ad34fa8f132ac87bc0dd0d41bf8da43a.jpg'
   },
   {
     id: 'p13',
-    name: 'Skoda Fabia Valve Guides',
+    name: 'Precision Brass Valve Guides Pack',
     category: 'valve-guides',
     sku: 'QAY-10133',
-    fitment: 'Skoda Fabia 1.2',
+    fitment: 'Standard Core Valvetrain',
     image: 'https://i.pinimg.com/1200x/60/f8/d4/60f8d48377fbf56752d0774d0a818e7a.jpg'
   },
   {
     id: 'p14',
-    name: 'Honda K24 Engine Bearings',
+    name: 'Heavy-Duty Main & Rod Bearings Set',
     category: 'bearings',
     sku: 'QAY-10144',
-    fitment: 'Honda Accord K24',
-    image: 'https://i.pinimg.com/1200x/66/da/87/66da87b3113d351f84af7e605772d953.jpg'
+    fitment: 'Journal Clearances Restored',
+    image: 'https://m.media-amazon.com/images/I/61zdqGCTBML._AC_SX679_.jpg'
   },
   {
     id: 'p15',
-    name: 'Toyota 1ZZ-FE Connecting Rods',
+    name: 'Forged H-Beam Connecting Rods',
     category: 'conrods',
     sku: 'QAY-10155',
-    fitment: 'Toyota Corolla 1.8',
+    fitment: 'High-Torque Construction',
     image: 'https://i.ebayimg.com/images/g/MWwAAOSw6Dlizmon/s-l1600.webp'
   },
   {
     id: 'p16',
-    name: 'Subaru EJ25 Timing Chain Kit',
+    name: 'Engine Timing Chain Roller Assembly',
     category: 'timing-chain-kits',
     sku: 'QAY-10166',
-    fitment: 'Subaru Impreza WRX',
+    fitment: 'Dual-Chain OHC Setup',
     image: 'https://i.pinimg.com/736x/a7/16/a5/a716a54433f7ee5ef4dbfb43b5cd7a2c.jpg'
   },
   {
     id: 'p17',
-    name: 'Porsche 911 Cylinder Head',
+    name: 'Billet Aluminium Cylinder Head Unit',
     category: 'cylinder-heads',
     sku: 'QAY-10177',
-    fitment: 'Porsche 911 Carrera',
+    fitment: 'Premium Airflow Design',
     image: 'https://i.pinimg.com/736x/2e/08/9c/2e089cf5f28cb1dab19b89e31bd7d462.jpg'
   },
   {
     id: 'p18',
-    name: 'Ford Mustang Crankshaft',
+    name: 'Large-Journal Cast Iron Crankshaft',
     category: 'crankshafts',
     sku: 'QAY-10188',
-    fitment: 'Ford Mustang GT',
+    fitment: 'V-Engine Configuration',
     image: 'https://i.pinimg.com/236x/b3/4f/ba/b34fba77b0ce5b0b68bf0408345ed8f3.jpg'
   },
   {
     id: 'p19',
-    name: 'Nissan RB26 Water Pump',
+    name: 'Auxiliary Drive Engine Water Pump',
     category: 'water-pumps',
     sku: 'QAY-10199',
-    fitment: 'Nissan Skyline R34',
+    fitment: 'High-Volume Fluid Flow',
     image: 'https://i.pinimg.com/1200x/49/41/e8/4941e84ee077b92493ca797891350f24.jpg'
   },
   {
     id: 'p20',
-    name: 'VW Golf Cam Kit',
+    name: 'Overhead Camshaft Intake Lobes Kit',
     category: 'cam-kits',
     sku: 'QAY-10210',
-    fitment: 'VW Golf MK7',
+    fitment: 'Variable Valve Lift Spec',
     image: 'https://i.pinimg.com/1200x/4c/20/d1/4c20d182388800666864058c3de4c223.jpg'
   },
   {
     id: 'p21',
-    name: 'GM Head Bolt Kit',
+    name: 'Engine Block Bolt & Fasteners Kit',
     category: 'head-bolts',
     sku: 'QAY-10221',
-    fitment: 'Chevrolet Cruze',
+    fitment: 'Grade 12.9 Structural Tech',
     image: 'https://i.pinimg.com/1200x/47/69/e0/4769e0d25801b89641c99c9b005ee4d8.jpg'
   },
   {
     id: 'p22',
-    name: 'Seat Ibiza Gasket Pack',
+    name: 'Molded Multi-Layer Gasket Pack',
     category: 'gaskets',
     sku: 'QAY-10232',
-    fitment: 'Seat Ibiza 1.6',
+    fitment: 'High-Heat Resilience Pack',
     image: 'https://i.pinimg.com/736x/ad/34/fa/ad34fa8f132ac87bc0dd0d41bf8da43a.jpg'
   }
 ];

@@ -15,7 +15,7 @@ export const BrandCarousel: React.FC = () => {
         .js-auto-marquee-track {
           display: flex;
           width: max-content;
-          animation: inlineMarquee 35s linear infinite !important;
+          animation: inlineMarquee 80s linear infinite !important;
         }
         .js-auto-marquee-track:hover {
           animation-play-state: paused !important;

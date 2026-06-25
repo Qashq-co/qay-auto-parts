@@ -9,13 +9,15 @@ import { FactsBanner } from './components/FactsBanner';
 import { Testimonials } from './components/Testimonials';
 import { Products } from './pages/Products';
 import FloatingTalkButton from './components/FloatingTalkButton';
-import {About} from './pages/About';
-import {Contact} from './pages/Contact';
-import {BrandCarousel} from './components/BrandCarousel';
-import { FAQ} from './components/Faqs'
-import { TrustedBrands} from './components/Brands'
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
+import { BrandCarousel } from './components/BrandCarousel';
+import { FAQ } from './components/Faqs';
+import { TrustedBrands } from './components/Brands';
+import { LegalPage } from './components/LegalPage';
 
-type Page = 'home' | 'about' | 'products' | 'contact';
+// Extended the Page union to include the three new legal page string states
+type Page = 'home' | 'about' | 'products' | 'contact' | 'privacy' | 'shipping' | 'terms';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -31,13 +33,12 @@ function App() {
             <Hero setCurrentPage={setCurrentPage} />
             <TrustBadges />
             <FeaturedCategories setCurrentPage={setCurrentPage} setSelectedCategory={setSelectedCategory} />
-            <BrandCarousel/>
+            <BrandCarousel />
             <WhyChooseUs />
             <FactsBanner />
             <Testimonials />
-            <TrustedBrands/>
-            <FAQ/>
-      
+            <TrustedBrands />
+            <FAQ />
           </>
         )}
 
@@ -46,14 +47,29 @@ function App() {
         )}
 
         {currentPage === 'about' && (
-        <About />
-      )}
+          <About />
+        )}
 
         {currentPage === 'contact' && (
-          <Contact/>
+          <Contact />
         )}
+
+        {/* Legal Route Conditions pointing to your unified data page layout */}
+        {currentPage === 'privacy' && (
+          <LegalPage policyType="privacy" />
+        )}
+
+        {currentPage === 'shipping' && (
+          <LegalPage policyType="shipping" />
+        )}
+
+        {currentPage === 'terms' && (
+          <LegalPage policyType="terms" />
+        )}
+        
       </main>
-        <FloatingTalkButton />
+      
+      <FloatingTalkButton />
       <Footer setCurrentPage={setCurrentPage} />
     </div>
   );

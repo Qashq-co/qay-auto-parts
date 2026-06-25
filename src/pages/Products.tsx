@@ -18,10 +18,10 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
     return matchesCategory && matchesSearch;
   });
 
-  // Pre-fills a WhatsApp message containing the exact chosen product information
+  // Pre-fills a WhatsApp message focusing on ordering/sourcing assistance
   const handleWhatsAppInquiry = (item: PartItem) => {
-    const phoneNumber = "447378201055"; // Replace with your real WhatsApp Business Number
-    const message = `Hello QAY Auto Parts Team, I would like to inquire about stock availability and pricing for the following component:\n\n• Part Name: ${item.name}\n• Category: ${item.category.toUpperCase()}\n• Reference SKU: ${item.sku}`;
+    const phoneNumber = "447378201055"; 
+    const message = `Hello QAY Auto Parts Team, I would like to inquire about sourcing capabilities, specific engine application matching, and pricing for this type of component:\n\n• Service Category: ${item.category.toUpperCase()}\n• Descriptive Type: ${item.name}\n• Reference Code: ${item.sku}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -29,7 +29,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
   return (
     <div className="bg-brand-lightBg min-h-screen">
       
-      {/* Category Header Banner inspired by image_972027.jpg */}
+      {/* Category Header Banner */}
       <div className="bg-brand-navy text-white py-12 text-center border-b-4 border-brand-orange">
         <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">{currentCategoryName}</h1>
         <p className="text-gray-400 text-xs sm:text-sm mt-2 tracking-widest uppercase">Engine Rebuild Components Catalogue</p>
@@ -38,7 +38,7 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
-          {/* Left Column Sidebar (Category Select) inspired by image_972027.jpg */}
+          {/* Left Column Sidebar */}
           <aside className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
               <h3 className="text-brand-navy font-black text-sm uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
@@ -78,20 +78,20 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
             </div>
           </aside>
 
-          {/* Right Column Grid (Product Results) inspired by image_972027.jpg */}
+          {/* Right Column Grid */}
           <section className="lg:col-span-3 space-y-6">
             
             {/* Search and Metadata Controls */}
             <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-4">
               <input 
                 type="text" 
-                placeholder="Search by keyword or factory reference SKU number..." 
+                placeholder="Search by component keyword or custom SKU number..." 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full sm:max-w-md px-4 py-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:border-brand-orange"
               />
               <p className="text-gray-400 text-xs font-bold tracking-wide uppercase">
-                Showing {filteredProducts.length} Results
+                Available Inquiries: {filteredProducts.length}
               </p>
             </div>
 
@@ -117,12 +117,11 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
                     </div>
 
                     <div className="px-4 pb-4 pt-2 border-t border-gray-50 space-y-3 bg-gray-50/50">
-                      {/* Interactive Custom WhatsApp Conversion Switch instead of traditional Add to Cart */}
                       <button
                         onClick={() => handleWhatsAppInquiry(product)}
-                        className="w-full bg-brand-orange hover:bg-brand-orange text-white font-bold text-xs uppercase py-2.5 rounded-lg flex items-center justify-center gap-2 tracking-wide shadow-sm transition-colors"
+                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-bold text-xs uppercase py-2.5 rounded-lg flex items-center justify-center gap-2 tracking-wide shadow-sm transition-colors"
                       >
-                        <span className="text-sm">💬</span> Check Trade Stock & Pricing
+                        <span className="text-sm">💬</span> Request Bespoke Quote
                       </button>
                     </div>
                   </article>
@@ -130,8 +129,8 @@ export const Products: React.FC<ProductsProps> = ({ selectedCategory, setSelecte
               </div>
             ) : (
               <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-                <p className="text-gray-400 font-bold uppercase text-sm">No specific stock files found matching your parameters.</p>
-                <p className="text-xs text-gray-400 mt-1">Please try modifying your search keywords or contact our trade desk directly.</p>
+                <p className="text-gray-400 font-bold uppercase text-sm">No component configurations found matching your criteria.</p>
+                <p className="text-xs text-gray-400 mt-1">Please modify your search keywords or reach out to our team directly.</p>
               </div>
             )}
           </section>

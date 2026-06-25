@@ -26,7 +26,7 @@ export const TrustedBrands: React.FC = () => {
     },
     { 
       name: 'Motive Components Ltd', 
-      imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/Group-62-1-1-1.jpg.webp' 
+      imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/Group-62-1-1.jpg.webp' 
     },
     { 
       name: 'Febi Bilstein', 
@@ -53,8 +53,8 @@ export const TrustedBrands: React.FC = () => {
       imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/Group-62-1-1-7.jpg.webp' 
     },
     { 
-      name: 'Vertex Auto', 
-      imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/image.jpg.webp' 
+      name: 'Germax autos', 
+      imageUrl: 'https://cdn-apexautoparts.azureedge.net/apex-files/files/brands/Germax.png' 
     },
     { 
       name: 'Ajusa', 
@@ -69,8 +69,8 @@ export const TrustedBrands: React.FC = () => {
       imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/image-1-2.jpg.webp' 
     },
     { 
-      name: 'BMS Automotive', 
-      imageUrl: 'https://titanautoparts.co.uk/wp-content/uploads/2025/10/image-1-4.jpg.webp' 
+      name: 'Thai Ho', 
+      imageUrl: 'https://cdn-apexautoparts.azureedge.net/apex-files/files/brands/Taiho.png' 
     },
     { 
       name: 'Corteco', 

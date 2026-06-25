@@ -28,7 +28,7 @@ export const CATEGORIES: Category[] = [
     name: 'Bearings',
     description: 'Precision crank and rod bearings',
     count: 58,
-    image: 'https://i.pinimg.com/1200x/66/da/87/66da87b3113d351f84af7e605772d953.jpg'
+    image: 'https://m.media-amazon.com/images/I/61zdqGCTBML._AC_SX679_.jpg'
   },
   {
     id: 'head-bolts',
